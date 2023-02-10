@@ -8,6 +8,10 @@ import Slider from "@mui/material/Slider";
 import Checkbox from "@mui/material/Checkbox";
 
 const Onefile = () => {
+   const handleDelete = () => {
+      console.info("You clicked the delete icon.");
+   };
+
    return (
       <div className="oneside">
          <div>
@@ -61,9 +65,9 @@ const Onefile = () => {
             </div>
             <div style={{ marginTop: "20px" }}>
                <Stack direction="row" spacing={1}>
-                  <Chip label="Tone 1" />
-                  <Chip label="Tone 2" />
-                  <Chip label="Tone 2" />
+                  <Chip label="Tone 1" onDelete={handleDelete} />
+                  <Chip label="Tone 2" onDelete={handleDelete}/>
+                  <Chip label="Tone 2" onDelete={handleDelete}/>
                </Stack>
             </div>
          </div>
@@ -79,13 +83,13 @@ const Onefile = () => {
             </div>
             <div style={{ marginTop: "20px" }}>
                <Stack direction="row" spacing={1}>
-                  <Chip label="Tone 1" />
-                  <Chip label="Tone 2" />
-                  <Chip label="Tone 3" />
+                  <Chip label="Tone 1" onDelete={handleDelete}/>
+                  <Chip label="Tone 2" onDelete={handleDelete}/>
+                  <Chip label="Tone 3" onDelete={handleDelete}/>
                </Stack>
                <Stack direction="row" spacing={1} mt={2}>
-                  <Chip label="Tone 4" />
-                  <Chip label="Tone 5" />
+                  <Chip label="Tone 4" onDelete={handleDelete}/>
+                  <Chip label="Tone 5" onDelete={handleDelete}/>
                </Stack>
             </div>
          </div>
