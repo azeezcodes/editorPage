@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+// /**
+//  * @description React wangEditor usage
+//  * @author wangfupeng
+//  */
+
+import React, { useState, useEffect } from "react";
+import "@wangeditor/editor/dist/css/style.css";
+// import { Editor, Toolbar } from "@wangeditor/editor-for-react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Onefile from "./components/Onefile";
+import Twofile from "./components/Twofile";
+import Threeside from "./components/Threeside";
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   return (
+      <div>
+         <Navbar />
+         <div className="body">
+            <div className="one">
+              <Onefile/>
+            </div>
+            <div className="two">
+               <Twofile/>
+            </div>
+            <div className="three">
+               <Threeside/>
+            </div>
+         </div>
+      </div>
+   );
 }
 
 export default App;
